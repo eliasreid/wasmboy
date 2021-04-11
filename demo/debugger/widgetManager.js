@@ -30,6 +30,7 @@ import InterruptState from './components/interrupt/interruptState/interruptState
 import TimerState from './components/timer/timerState/timerState';
 import AboutComponent from './components/other/about/about';
 import HelpComponent from './components/other/help/help';
+import EnemyControl from './components/pokehack/enemyControl/enemyControl.js';
 
 const components = {
   WasmBoyPlayer: <WasmBoyPlayer />,
@@ -53,7 +54,8 @@ const components = {
   InterruptState: <InterruptState />,
   TimerState: <TimerState />,
   AboutComponent: <AboutComponent />,
-  HelpComponent: <HelpComponent />
+  HelpComponent: <HelpComponent />,
+  EnemyControl: <EnemyControl />
 };
 
 const LOCALSTORAGE_KEY = 'WASMBOY_DEBUGGER_WIDGET_MANAGER';

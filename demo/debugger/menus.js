@@ -13,6 +13,7 @@ import audioCommands from './commands/widgets/audio';
 import interruptCommands from './commands/widgets/interrupt';
 import timerCommands from './commands/widgets/timer';
 import otherCommands from './commands/widgets/other';
+import pokehackCommands from './commands/widgets/pokehack';
 
 const menus = [];
 
@@ -79,6 +80,11 @@ let otherSubMenu = new phosphorWidgets.Menu({ commands });
 otherSubMenu.title.label = 'Other';
 addCommandsToMenu(otherCommands, otherSubMenu);
 widgetMenu.addItem({ type: 'submenu', submenu: otherSubMenu });
+// Other
+let pokehackSubMenu = new phosphorWidgets.Menu({ commands });
+pokehackSubMenu.title.label = 'Pokehack';
+addCommandsToMenu(pokehackCommands, pokehackSubMenu);
+widgetMenu.addItem({ type: 'submenu', submenu: pokehackSubMenu });
 
 menus.push(widgetMenu);
 

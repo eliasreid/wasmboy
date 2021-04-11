@@ -10,6 +10,7 @@ import audioCommands from './widgets/audio';
 import interruptCommands from './widgets/interrupt';
 import timerCommands from './widgets/timer';
 import otherCommands from './widgets/other';
+import pokehackCommands from './widgets/pokehack';
 
 const importedCommands = [
   openCommands,
@@ -20,7 +21,8 @@ const importedCommands = [
   audioCommands,
   interruptCommands,
   timerCommands,
-  otherCommands
+  otherCommands,
+  pokehackCommands
 ];
 
 // Commands that will be execute by click actions and things
