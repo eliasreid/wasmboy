@@ -45,6 +45,12 @@ export default class EnemyControl extends Component {
     }
   }
 
+  useMove(moveIndex) {
+    //TODO: write appropriate memory address?
+    // IF button is enabled, then can assume it's safe to write to memory
+    console.log('using move %d', moveIndex);
+  }
+
   render() {
     return (
       <div class="enemy-control">
@@ -53,12 +59,22 @@ export default class EnemyControl extends Component {
           <i>Will eventually do something.</i>
         </div>
 
-        {/* Play/Pause Toggle */}
+        {/* Buttons to select pokemon move*/}
         <div class="enemy-control_moves">
-          <button onClick={() => WasmBoy.setSpeed(0.5)}>Move 0</button>
-          <button onClick={() => WasmBoy.setSpeed(1.0)}>Move 1</button>
-          <button onClick={() => WasmBoy.setSpeed(2.0)}>Move 2</button>
-          <button onClick={() => WasmBoy.setSpeed(4.0)}>Move 3</button>
+          <button onClick={() => this.useMove(0)}>Move 0</button>
+          <button onClick={() => this.useMove(1)}>Move 1</button>
+          <button onClick={() => this.useMove(2)}>Move 2</button>
+          <button onClick={() => this.useMove(3)}>Move 3</button>
+        </div>
+
+        {/* Buttons to select pokemon to switch to*/}
+        <div class="enemy-control_switch">
+          <button onClick={() => this.changeSwitchMon(0)}>Mon 0</button>
+          <button onClick={() => this.changeSwitchMon(1)}>Mon 1</button>
+          <button onClick={() => this.changeSwitchMon(2)}>Mon 2</button>
+          <button onClick={() => this.changeSwitchMon(3)}>Mon 3</button>
+          <button onClick={() => this.changeSwitchMon(4)}>Mon 4</button>
+          <button onClick={() => this.changeSwitchMon(5)}>Mon 5</button>
         </div>
       </div>
     );

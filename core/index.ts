@@ -83,8 +83,19 @@ export {
   getRegisterF,
   getProgramCounter,
   getStackPointer,
+  setRegisterA,
+  setRegisterB,
+  setRegisterC,
+  setRegisterD,
+  setRegisterE,
+  setRegisterH,
+  setRegisterL,
+  setRegisterF,
+  setProgramCounter,
+  setStackPointer,
   getOpcodeAtProgramCounter
 } from './debug/debug-cpu';
+
 export {
   getLY,
   getScrollX,

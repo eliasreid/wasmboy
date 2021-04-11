@@ -42,6 +42,46 @@ export function getStackPointer(): u16 {
   return Cpu.stackPointer;
 }
 
+export function setRegisterA(value: u8): void {
+  Cpu.registerA = value;
+}
+
+export function setRegisterB(value: u8): void {
+  Cpu.registerB = value;
+}
+
+export function setRegisterC(value: u8): void {
+  Cpu.registerC = value;
+}
+
+export function setRegisterD(value: u8): void {
+  Cpu.registerD = value;
+}
+
+export function setRegisterE(value: u8): void {
+  Cpu.registerE = value;
+}
+
+export function setRegisterH(value: u8): void {
+  Cpu.registerH = value;
+}
+
+export function setRegisterL(value: u8): void {
+  Cpu.registerL = value;
+}
+
+export function setRegisterF(value: u8): void {
+  Cpu.registerF = value;
+}
+
+export function setProgramCounter(address: u16): void {
+  Cpu.programCounter = address;
+}
+
+export function setStackPointer(address: u16): void {
+  Cpu.stackPointer = address;
+}
+
 export function getOpcodeAtProgramCounter(): u8 {
   return <u8>eightBitLoadFromGBMemory(Cpu.programCounter);
 }
