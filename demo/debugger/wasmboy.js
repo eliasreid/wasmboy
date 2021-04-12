@@ -64,12 +64,14 @@ const WasmBoyDefaultOptions = {
     }
   },
   breakpointCallback: () => {
+    Pubx.publish(PUBX_KEYS.WASMBOY, { pausedOnBreakpoint: true });
     console.log('breakpoint Callback Called!');
   },
   onReady: () => {
     console.log('onReady Callback Called!');
   },
   onPlay: () => {
+    Pubx.publish(PUBX_KEYS.WASMBOY, { pausedOnBreakpoint: false });
     console.log('onPlay Callback Called!');
   },
   onPause: () => {
